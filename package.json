@@ -1,8 +1,9 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "star-war-character",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "hazel",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
