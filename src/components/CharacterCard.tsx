@@ -7,8 +7,6 @@ interface ICharacterCard {
 
 const { Meta } = Card;
 const CharacterCard = ({ character }: ICharacterCard) => {
-  const color = "red";
-  console.log("character", character);
   return (
     <Card
       hoverable

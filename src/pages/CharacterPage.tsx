@@ -23,7 +23,7 @@ const CharacterPage = () => {
   if (isError) return <p>Somthing went wrong!</p>;
   return (
     <>
-      <div style={{ padding: "20px" }}>
+      <Flex vertical gap="large" style={{ padding: "20px" }}>
         <h1>Character List</h1>
         {isLoading ? (
           <Spin />
@@ -67,7 +67,7 @@ const CharacterPage = () => {
             }
           />
         )}
-      </div>
+      </Flex>
     </>
   );
 };

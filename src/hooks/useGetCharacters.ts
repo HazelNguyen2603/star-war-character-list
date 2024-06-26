@@ -13,7 +13,7 @@ const useGetCharacters = (page = 1) => {
     const resultCustom = characters.results?.map((item) => {
       return {
         ...item,
-        image: `https://picsum.photos/seed/${Math.random()}/200/300`,
+        image: `https://picsum.photos/seed/${Math.random()}/200`,
       };
     });
     return {

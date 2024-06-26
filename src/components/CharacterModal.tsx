@@ -12,7 +12,6 @@ interface ICharacterModal {
 const CharacterModal = ({ open, handleClose, character }: ICharacterModal) => {
   const planetId = extractNumberFromUrl(character.homeworld);
   const { planet, isLoading, isError } = useGetPlanet(planetId || 1);
-  console.log("planet", planet);
 
   if (isError) return <>{message.error("Something went wrong!")}</>;
   return (
