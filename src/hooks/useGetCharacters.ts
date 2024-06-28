@@ -7,8 +7,11 @@ const useGetCharacters = (page = 1) => {
   const { data, isLoading, isError } = useQuery({
     queryKey: ["characters", page],
     queryFn: () => getAllCharacterService(page),
+    retry: false,
   });
+
   const characters: ICharacterList = data?.data || [];
+
   const customCharactor = useMemo(() => {
     const resultCustom = characters.results?.map((item) => {
       return {
@@ -21,6 +24,7 @@ const useGetCharacters = (page = 1) => {
       results: resultCustom,
     };
   }, [characters]);
+
   return { customCharactor, isLoading, isError };
 };
 
